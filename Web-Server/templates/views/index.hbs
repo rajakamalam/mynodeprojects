@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Note 1: If a path start with ./ it is a relative path. This means that the starting will be
+    the current folder. In our case: public-->
+    <!-- Note 2: If a path starts with / it is an absolute path. This means, we have to start giving 
+    path from th root directory-->
+    <link rel='stylesheet' href='./css/style.css'>
+    <script src="./javaScriptFiles/javscr.js"></script>
+
+</head>
+
+<body>
+    <!--The opening and closing of two curly braces is used to reference values that we have 
+    given in from hbs in the node file-->
+    <h1> {{title}} </h1>
+    <h2> {{name}} </h2>
+</body>
+
+</html>

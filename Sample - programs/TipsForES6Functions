@@ -1,0 +1,16 @@
+ES6 function is a standard that enables a few usefull short hands
+
+1. Short hand:
+Ex: 
+const user = {
+    name: name,
+    age: userAge
+}
+
+--Assuming that the value for name comes from a variable named "name" it can be re-written as the follows
+const user = {
+    name,
+    age: userAge
+}
+
+2. Destructing objects
