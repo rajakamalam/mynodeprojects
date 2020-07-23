@@ -23,4 +23,5 @@ app.listen(port, () => {
 })
 Step 4: Change the following line from the js file inside JS folder 
 fetch('http://localhost:3000/weather?address=' + encodeURIComponent(location)).then((response) => {}
+Step 5: 
 
