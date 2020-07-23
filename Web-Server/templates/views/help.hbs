@@ -3,13 +3,16 @@
 <html>
 
 <head>
-
+    <link rel='stylesheet' href='./css/style.css'>
 </head>
 
 <body>
-    <h1>{{title}}</h1>
+    <!--The below is the syntax for using partials-->
+    <h1>{{>header}}</h1>
+    <!--<h1>{{title}}</h1>-->
     <P>{{text}}</P>
-    <p>{{name}}</p>
+    <!--<p>{{name}}</p>-->
+    <h3>{{>footer}}</h3>
 </body>
 
 </html>

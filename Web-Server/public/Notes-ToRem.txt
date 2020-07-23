@@ -1,0 +1,26 @@
+1. Once the application has been built, we will need to help all the users from anywhere to access 
+our weather application.
+In order to do this, we are attemoting to use two applications GIT and Heroku.
+
+GIT:
+1. We will use GIT to upload all our code to a public directory 
+
+
+Heroku:
+For a node application to start in the terminal we use node app.js.. This means that, the app.js is the 
+first file to run in an application. While deploying in Heroku, the same thing happens. We will 
+configure heroku to then run app.js 
+For these steps to happen, the following steps have to be taken 
+Step 1: Set up your own customized Heroku space
+Step 2: Make changes in the package.json file under scripts 
+"scripts" : {
+    "start" : "node src/app.js"
+}
+We can do the above, locally as well by giving command "npm run start"
+Step 3: Make the following in "app.js" file
+app.listen(port, () => {
+   console.log('Server is up on port ' + port)
+})
+Step 4: Change the following line from the js file inside JS folder 
+fetch('http://localhost:3000/weather?address=' + encodeURIComponent(location)).then((response) => {}
+

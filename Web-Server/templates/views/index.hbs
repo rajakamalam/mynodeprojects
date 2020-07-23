@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -8,15 +7,25 @@
     <!-- Note 2: If a path starts with / it is an absolute path. This means, we have to start giving 
     path from th root directory-->
     <link rel='stylesheet' href='./css/style.css'>
-    <script src="./javaScriptFiles/javscr.js"></script>
-
 </head>
 
 <body>
+    <!--The below is the syntax for using partials-->
+    <h1>{{>header}}</h1>
+
+    <form>
+        <input placeholder="Location">
+        <button>Search</button>
+        <p id='msg1'>Message 1</p>
+        <p id='msg2'>Message 2</p>
+        </input>
+    </form>
     <!--The opening and closing of two curly braces is used to reference values that we have 
     given in from hbs in the node file-->
-    <h1> {{title}} </h1>
-    <h2> {{name}} </h2>
+    <!--<h1> {{title}} </h1>-->
+    <!--<h2> {{name}} </h2>-->
+    <h3>{{>footer}}</h3>
+    <script src="./javaScriptFiles/javscr.js"></script>
 </body>
 
 </html>

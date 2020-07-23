@@ -1,6 +1,7 @@
 //Web servers - Part 2
 //The below section contains:
 //1. Advanced templating
+//2. Providing 404 error message
 
 const path = require('path')
 const express = require('express')
@@ -44,7 +45,26 @@ app.get('/help', (req, res) => {
 app.get('/weather', (req, res) => {
     res.send({
         location: 'Chennai TN, India',
-        weather: 'The weather outside is 35 degress. It feels like 40.'
+        weather: 'The weather outside is 35 degress. It feels like 40.',
+        name: 'Created by -Rajakamalam'
+    })
+})
+
+//The character means, match everything that hasnt been matched before
+//Note: This app.get should always be the last
+app.get('/help/*', (req, res) => {
+    res.render('404-error-page', {
+        title: '404 - Error codes',
+        message: 'Help article not found',
+        name: 'Created by -Rajakamalam'
+    })
+})
+
+app.get('*', (req, res) => {
+    res.render('404-error-page', {
+        title: '404 - Error codes',
+        message: '404 - Page not found',
+        name: 'Created by -Rajakamalam'
     })
 })
 
